@@ -4,12 +4,53 @@
 	<meta charset="UTF-8">
 	<title>Mein Praktikumsblog</title>
 	<style>
-		.logo-container {
+		body {
+    background-color: #0f7187;
+}
+        #fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    z-index: 1000;
+}
+
+#fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+        
+        
+        .logo-container {
 			text-align: center;
 		}
 		.logo-container img {
 			max-width: 200px;
 		}
+		 .tag-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .tag-container ul {
+            flex: 1;
+         min-width: 0;
+		}
+
+        .tag-image {
+            max-width: 250px;
+           	flex-shrink: 0;
+		    border-radius: 8px;
+            cursor: zoom-in;
+        }
 	</style>
 </head>
 <body>
@@ -47,14 +88,39 @@
     <li>Außerdem habe ich von einem Kunden den Auftrag erhalten, die alte Wärmeleitpaste zu entfernen und zu erneuern.</li>
     <li>Abschließend habe ich ein KI-Tool heruntergeladen und als Unterstützung genutzt, um meine erste Webseite auf GitHub zu erstellen.</li>
 </ul>
- <img src="bilder/rechner.png" alt="Geöffneter PC während der Wartung" class="tag-image">
+ <img src="bilder/rechner.png" alt="Geöffneter PC während der Wartung" class="tag-image" onclick="openFullscreen(this)">
+ <p class="side-text">
+        Hier habe ich die Wärmeleitpaste des Prozessors ausgetauscht,
+        um die Kühlleistung zu verbessern.
+    </p>
 </div>
-    <h2>Tag 3: Dritter Tag im Praktikum</h2>
+   <div id="fullscreen-overlay" onclick="closeFullscreen()">
+        <img id="fullscreen-image" src="">
+        </div>
+        <script>
+            function openFullscreen(img) {
+                document.getElementById('fullscreen-image').src = img.src;
+                document.getElementById('fullscreen-overlay').style.display = 'flex';
+            }
+             function closeFullscreen() {
+                document.getElementById('fullscreen-overlay').style.display = 'none';
+            }
+              
+        </script>
+<h2>Tag 3: Dritter Tag im Praktikum</h2>
     <ul>
         <li>Zu Beginn habe ich meine erste Webseite fertiggestellt.</li>
         <li>Anschließend habe ich eine Werbeanzeige für einen Kunden erstellt.</li>
-        <li>Abschließend habe ich die Buchhaltung des Unternehmens durchgeführt.</li>
-    </ul>	
+        <li>Abschließend habe ich die Buchhaltung des Unternehmens durchgeführt.</li>	 
+        <li>Einführung in DNS und Domain  </li>
+    </ul>
+    <h2>Tag 4: Vierter Tag im Praktikum</h2>
+    <ul>
+        <li>Zu Beginn habe ich den Namen meiner Domain geändert.</li>
+        <li>Anschließend habe ich weiter an meiner eigenen Website gearbeitet.</li>
+        <li>Abschließend habe ich der Kundin das fertige Ergebnis ihrer Website für ihre Tischlerei-Firma präsentiert.</li>
+    </ul>
+
 </body>
 </html>
 	
