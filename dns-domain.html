@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>DNS-Domain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #82a317;
+            color: #ffffff;
+            padding: 20px;
+        }
+        
+        /* Das normale Vorschaubild */
+        .thumbnail {
+            max-width: 20%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            cursor: pointer; /* Zeigt dem Nutzer, dass es anklickbar ist */
+            transition: transform 0.2s;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05); /* Kleiner Hover-Effekt */
+        }
+
+        /* Das Vollbild-Overlay (standardmäßig versteckt) */
+        .fullscreen-overlay {
+            display: none; /* Versteckt das Overlay initial */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Dunkler Hintergrund */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Das Bild im Vollbildmodus */
+        .fullscreen-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Der Schließen-Button (X) */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .close-btn:hover {
+            color: #bbb;
+        }
+</style>
+<h1>DNS-Domain</h1>  
+  <h2>Was ist eine Domain?</h2>
+  <p>Eine Domain ist ein eindeutiger Name, der auf einen Computer oder eine Website auf dem Internet zeigt.</p>
+  <h2>Was ist DNS?</h2>
+  <p>DNS, kurz für Domain Name System, funktioniert wie ein Telefonbuch für das Internet. <br>Jede Website hat eine eigene IP-Adresse – eine Zahlenkombination, mit der Computer arbeiten.<br> Da sich Menschen aber schlecht Zahlen merken können, tippen wir stattdessen einen Domainnamen ein, zum Beispiel google.de.<br>
+    Wenn du diesen Namen in den Browser eingibst, fragt dein Computer beim DNS nach: "Welche IP-Adresse gehört zu google.de?" <br>Das DNS schaut in seinem Telefonbuch nach, findet die passende IP-Adresse und schickt sie zurück. Erst dann kann sich dein Computer mit dem richtigen Server verbinden und die Website laden.</p>
+    <img id="myImg" class="thumbnail" src="bilder/domain.png" alt="Schaubild zum Thema DNS und Domains">
+
+    <div id="imageOverlay" class="fullscreen-overlay">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img class="fullscreen-img" id="imgTarget" src="" alt="Vollbildansicht">
+    </div>
+
+    <script>
+        const img = document.getElementById('myImg');
+        const overlay = document.getElementById('imageOverlay');
+        const fullscreenImg = document.getElementById('imgTarget');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Öffnen bei Klick aufs Bild
+        img.addEventListener('click', function() {
+            overlay.style.display = 'flex'; // Macht das Overlay sichtbar
+            fullscreenImg.src = this.src;  // Übergibt die Bildquelle an das Vollbild
+        });
+
+        // Schließen bei Klick auf das "X"
+        closeBtn.addEventListener('click', function() {
+            overlay.style.display = 'none'; // Versteckt das Overlay wieder
+        });
+
+        // Optional: Schließen bei Klick irgendwo in den grauen Hintergrund
+        overlay.addEventListener('click', function(event) {
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
