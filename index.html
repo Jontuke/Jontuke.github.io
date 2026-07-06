@@ -3,130 +3,205 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mein Praktikumsblog</title>
-   	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
 	<style>
 		body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #82a317;
-}
-        #fullscreen-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-    cursor: zoom-out;
-    z-index: 1000;
-}
+			font-family: 'Space Grotesk', sans-serif;
+			background-color: #82a317;
+		}
 
-#fullscreen-image {
-    max-width: 90%;
-    max-height: 90%;
-}
+		#fullscreen-overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			justify-content: center;
+			align-items: center;
+			cursor: zoom-out;
+			z-index: 1000;
+		}
 
-        
-        
-        .logo-container {
+		#fullscreen-image {
+			max-width: 90%;
+			max-height: 90%;
+		}
+
+		.logo-container {
 			text-align: center;
+			margin-top: 20px;
 		}
 		.logo-container img {
 			max-width: 200px;
 		}
-		 .tag-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-        }
 
-        .tag-container ul {
-            flex: 1;
-         min-width: 0;
+		.tag-container {
+			display: flex;
+			align-items: flex-start;
+			gap: 20px;
+			margin-bottom: 15px;
 		}
 
-        .tag-image {
-            max-width: 250px;
-           	flex-shrink: 0;
-		    border-radius: 8px;
-            cursor: zoom-in;
-        }
+		.tag-container ul {
+			flex: 1;
+			min-width: 0;
+		}
+
+		.tag-image {
+			max-width: 250px;
+			flex-shrink: 0;
+			border-radius: 8px;
+			cursor: zoom-in;
+		}
+
+		main {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+		/* NEU: Abstände */
+		h1 {
+			text-align: center;
+			margin: 30px 0 20px 0;
+		}
+
+		h2 {
+			margin-top: 40px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			line-height: 1.6;
+			margin-bottom: 15px;
+		}
+
+		ul {
+			line-height: 1.8;
+			margin-bottom: 15px;
+		}
+
+		li {
+			margin-bottom: 8px;
+		}
+
+		section {
+			margin-bottom: 50px;
+			padding-bottom: 30px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+
+		section:last-of-type {
+			border-bottom: none;
+		}
+
+		footer {
+			text-align: center;
+			padding: 30px 20px;
+			opacity: 0.8;
+		}
 	</style>
 </head>
 <body>
-	 <div class="logo-container">
-        <img src="bilder/logo.png" alt="Mein Logo">
-    </div>
-	<h1>Willkommen zu meinem Praktikumsblog!</h1>
-	<h2>Über mich</h2>
-	<p>Hallo,mein Name ist Jonathan Tüker, ich bin 17 Jahre alt. Ich gehe momentan in die 11. Klasse
-        am BWV in Ahaus. Ich absolviere mein Praktikum bei Simons Computer Service.
-    </p>
 
-	<h2>Tag 1: Erster Tag im Praktikum</h2>
-	<ul><li>Zu Beginn habe ich einen Computer im Rahmen einer Wartungsmaßnahme intern gereinigt.</li>
-        <li>Anschließend habe ich einen Laptop für einen Kunden eingerichtet.</li>
-        <li>Dabei konnte ich mehr über die Betriebssysteme Linux und Microsoft erfahren.</li>
-        <li>Außerdem habe ich eine Rechnung erstellt und an einen Kunden verschickt.</li>
-        <li>In diesem Zusammenhang habe ich Preise für Kunden kalkuliert.</li>
-        <li>Darauf aufbauend habe ich die daraus resultierenden Gewinne berechnet.</li>
-        <li>Des Weiteren habe ich Server (Linux, Ubuntu, VPS) gewartet und instandgehalten.</li>
-        <li>Zudem erhielt ich eine Einführung in WordPress.</li>
-        <li>Im Zuge dessen habe ich die erste Domain erworben.</li>
-        <li>Gegen Ende habe ich das E-Mail-Programm Outlook für einen Kunden eingerichtet.</li>
-        <li>Abschließend habe ich den Cloud-Speicher OneDrive für einen Kunden eingerichtet.</li>			
-    </ul>
-	
-<h2>Tag 2: Zweiter Tag im Praktikum</h2>
-<ul>
-	<li>Zu Beginn habe ich meine E-Mails überprüft.</li>
-	<li>Anschließend habe ich mich etwa zehn Minuten lang über aktuelle IT-News informiert.</li>
-	<li>Danach habe ich ein ProtonMail-Konto erstellt.</li>
-	<li>Ergänzend dazu habe ich ProtonPass als Passwortmanager eingerichtet.</li>
-	<li>Des Weiteren habe ich einen GitHub-Account erstellt.</li>
-    <li>Im Anschluss habe ich das Programm VS Code heruntergeladen und installiert.</li>
-    <li>Außerdem habe ich von einem Kunden den Auftrag erhalten, die alte Wärmeleitpaste zu entfernen und zu erneuern.</li>
-    <li>Abschließend habe ich ein KI-Tool heruntergeladen und als Unterstützung genutzt, um meine erste Webseite auf GitHub zu erstellen.</li>
-</ul>
- <img src="bilder/rechner.png" alt="Geöffneter PC während der Wartung" class="tag-image" onclick="openFullscreen(this)">
- <p class="side-text">
-        Hier habe ich die Wärmeleitpaste des Prozessors ausgetauscht,
-        um die Kühlleistung zu verbessern.
-    </p>
-</div>
-   <div id="fullscreen-overlay" onclick="closeFullscreen()">
-        <img id="fullscreen-image" src="">
-        </div>
-        <script>
-            function openFullscreen(img) {
-                document.getElementById('fullscreen-image').src = img.src;
-                document.getElementById('fullscreen-overlay').style.display = 'flex';
-            }
-             function closeFullscreen() {
-                document.getElementById('fullscreen-overlay').style.display = 'none';
-            }
-              
-        </script>
-<h2>Tag 3: Dritter Tag im Praktikum</h2>
-    <ul>
-        <li>Zu Beginn habe ich meine erste Webseite fertiggestellt.</li>
-        <li>Anschließend habe ich eine Werbeanzeige für einen Kunden erstellt.</li>
-        <li>Abschließend habe ich die Buchhaltung des Unternehmens durchgeführt.</li>	 
-        <li>Einführung in <a href="dns-domain.html" target="_blank">DNS und Domain</a></li>
-    <h2>Tag 4: Vierter Tag im Praktikum</h2>
-    <ul>
-        <li>Zu Beginn habe ich den Namen meiner Domain geändert.</li>
-        <li>Anschließend habe ich weiter an meiner eigenen Website gearbeitet.</li>
-        <li>Abschließend habe ich der Kundin das fertige Ergebnis ihrer Website für ihre Tischlerei-Firma präsentiert.</li>
-    </ul>
+	<header>
+		<div class="logo-container">
+			<img src="bilder/logo.png" alt="Mein Logo">
+		</div>
+		<h1>Willkommen zu meinem Praktikumsblog!</h1>
+	</header>
+
+	<main>
+
+		<section id="ueber-mich">
+			<h2>Über mich</h2>
+			<p>
+				Hallo, mein Name ist Jonathan Tüker, ich bin 17 Jahre alt. Ich gehe momentan in die 11. Klasse
+				am BWV in Ahaus. Ich absolviere mein Praktikum bei Simons Computer Service.
+			</p>
+		</section>
+
+		<section id="tag1">
+			<h2>Tag 1: 29.06.2026</h2>
+			<ul>
+				<li>Zu Beginn habe ich einen Computer im Rahmen einer Wartungsmaßnahme intern gereinigt.</li>
+				<li>Anschließend habe ich einen Laptop für einen Kunden eingerichtet.</li>
+				<li>Dabei konnte ich mehr über die Betriebssysteme Linux und Microsoft erfahren.</li>
+				<li>Außerdem habe ich eine Rechnung erstellt und an einen Kunden verschickt.</li>
+				<li>In diesem Zusammenhang habe ich Preise für Kunden kalkuliert.</li>
+				<li>Darauf aufbauend habe ich die daraus resultierenden Gewinne berechnet.</li>
+				<li>Des Weiteren habe ich Server (Linux, Ubuntu, VPS) gewartet und instandgehalten.</li>
+				<li>Zudem erhielt ich eine Einführung in WordPress.</li>
+				<li>Im Zuge dessen habe ich die erste Domain erworben.</li>
+				<li>Gegen Ende habe ich das E-Mail-Programm Outlook für einen Kunden eingerichtet.</li>
+				<li>Abschließend habe ich den Cloud-Speicher OneDrive für einen Kunden eingerichtet.</li>
+			</ul>
+		</section>
+
+		<section id="tag2">
+			<h2>Tag 2: 30.06.2026</h2>
+			<div class="tag-container">
+				<ul>
+					<li>Zu Beginn habe ich meine E-Mails überprüft.</li>
+					<li>Anschließend habe ich mich etwa zehn Minuten lang über aktuelle IT-News informiert.</li>
+					<li>Danach habe ich ein ProtonMail-Konto erstellt.</li>
+					<li>Ergänzend dazu habe ich ProtonPass als Passwortmanager eingerichtet.</li>
+					<li>Des Weiteren habe ich einen GitHub-Account erstellt.</li>
+					<li>Im Anschluss habe ich das Programm VS Code heruntergeladen und installiert.</li>
+					<li>Außerdem habe ich von einem Kunden den Auftrag erhalten, die alte Wärmeleitpaste zu entfernen und zu erneuern.</li>
+					<li>Abschließend habe ich ein KI-Tool heruntergeladen und als Unterstützung genutzt, um meine erste Webseite auf GitHub zu erstellen.</li>
+				</ul>
+				<img src="bilder/rechner.png" alt="Geöffneter PC während der Wartung" class="tag-image" onclick="openFullscreen(this)">
+			</div>
+			<p class="side-text">
+				Hier habe ich die Wärmeleitpaste des Prozessors ausgetauscht,
+				um die Kühlleistung zu verbessern.
+			</p>
+		</section>
+
+		<section id="tag3">
+			<h2>Tag 3: 01.07.2026</h2>
+			<ul>
+				<li>Zu Beginn habe ich meine erste Webseite fertiggestellt.</li>
+				<li>Anschließend habe ich eine Werbeanzeige für einen Kunden erstellt.</li>
+				<li>Abschließend habe ich die Buchhaltung des Unternehmens durchgeführt.</li>
+				<li>Einführung in <a href="dns-domain.html" target="_blank">DNS und Domain</a></li>
+			</ul>
+		</section>
+
+		<section id="tag4">
+			<h2>Tag 4: 02.07.2026</h2>
+			<ul>
+				<li>Zu Beginn habe ich den Namen meiner Domain geändert.</li>
+				<li>Anschließend habe ich weiter an meiner eigenen Website gearbeitet.</li>
+				<li>Abschließend habe ich der Kundin das fertige Ergebnis ihrer Website für ihre Tischlerei-Firma präsentiert.</li>
+			</ul>
+		</section>
+
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Jonathan Tüker</p>
+	</footer>
+
+	<div id="fullscreen-overlay" onclick="closeFullscreen()">
+		<img id="fullscreen-image" src="">
+	</div>
+
+	<script>
+		function openFullscreen(img) {
+			document.getElementById('fullscreen-image').src = img.src;
+			document.getElementById('fullscreen-overlay').style.display = 'flex';
+		}
+
+		function closeFullscreen() {
+			document.getElementById('fullscreen-overlay').style.display = 'none';
+		}
+	</script>
 
 </body>
 </html>
-	
-
-
-	
